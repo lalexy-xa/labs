@@ -3,134 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LabForm</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Lab1.3.4.1</title>
 </head>
 
 <body>
-    <form action="GET">
-        <div>
-            <table>
-                <!-- заголовок и линия -->
-                <tr align="center">
-                    <td colspan="2"><b>Add Your City</b></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <hr />
-                    </td>
-                </tr>
-                <!-- Имя -->
-                <tr>
-                    <td>
-                        <label for="name">Your name</label>
-                    </td>
-                    <td>
-                        <input autofocus required id="name" placeholder="My name" type="text">
-                    </td>
-                </tr>
-                <!-- Страна -->
-                <tr>
-                    <td>
-                        <label for="country">Country</label>
-                    </td>
-                    <td>
-                        <input disabled id="country" placeholder="Финляндия" type="text">
-                    </td>
-                </tr>
-                <!-- Почта -->
-                <tr>
-                    <td>
-                        <label for="mail">E-mail</label>
-                    </td>
-                    <td>
-                        <input required id="mail" type="email" placeholder="mail@example.com">
-                    </td>
-                </tr>
-                <!-- Выбор города -->
-                <tr>
-                    <td>
-                        <label for="city">Add a new city</label>
-                    </td>
-                    <td>
-                        <input type="text" id="city" placeholder="My city: add/choose" required list="cities">
-                        <datalist id="cities">
-                            <option>Энонтекиё</option>
-                            <option>Эспоо</option>
-                            <option>Хямеэнлинна</option>
-                            <option>Диджестивы</option>
-                            <option>Хамина</option>
-                            <option>Хаукипудас</option>
-                        </datalist>
+    <div class="container">
+        <header>
+            <button>Log in</button>
+            <button>Sign up</button>
+            <button>About us</button>
+        </header>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel minima hic error accusamus corrupti rem
+                cupiditate, porro illo, fugit omnis necessitatibus amet. Voluptatum dolores delectus saepe enim ad
+                repellendus nihil.
+                <button>Read more...</button>
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel minima hic error accusamus corrupti rem
+                cupiditate, porro illo, fugit omnis necessitatibus amet. Voluptatum dolores delectus saepe enim ad
+                repellendus nihil.
+                <button>Read more...</button>
+            </p>
+            <div class="subscribe-btn">
+                <button>Subscribe for news</button>
+            </div>
 
-                    </td>
-                </tr>
-                <!-- Добавить файл -->
-                <tr>
-                    <td>
-                        <span>Add photo</span>
-                    </td>
-                    <td>
-                        <input type="file">
-                    </td>
-                </tr>
-                <!-- Textarea -->
-                <tr>
-                    <td colspan="2">
-                        <textarea style="resize: none;" name="city-description" placeholder="Write some words"
-                            maxlength="500" cols="50" rows="10"></textarea>
-                    </td>
-                </tr>
-                <!-- Радио кнопки -->
-                <tr>
-                    <td colspan="2">
-                        <input required type="radio" name="love-finland" value="val1">Nice city
-                        <input type="radio" name="love-finland" value="val2">Boring city
-                    </td>
-                </tr>
-                <!-- Согласие - чекбокс -->
-                <tr>
-                    <td colspan="2" width="10px">
-                        <label>
-                            <input required type="checkbox" checked> Я согласен/а на обработку своих персональных данных
-                        </label>
-                    </td>
-                </tr>
-                <!-- Кнопки -->
-                <tr>
-                    <td>
-                        <button type="reset"><b>CLEAR</b></button>
-                    </td>
-                    <td align="right">
-                        <input formtarget="blank" type="image" alt="Add" src="img/submit-button.png" width="100px">
-                    </td>
-                </tr>
-            </table>
+
         </div>
-    </form>
-    <h1>Хельсинки</h1>
-    <p><b>Хельсинки - столица Финляндии</b></p>
-    <p>Город Хельсинки был основан шведским королём Густавом I пять веков назад, 12 июня 1550 года. По приказу Его
-        Величества несколько сот поселенцев из Порвоо осели в дельте реки Вантаа, на берегу залива.
-    </p>
-    <img width="500px" height="300px" src="img/Хельсинки.jpg" alt="Helsinki-view">
-    <div>
-        <b>Другие крупные города страны:</b>
-        <ul style="list-style-type: square;">
-            <li>Эспоо</li>
-            <li>Тампере</li>
-            <li>Вантаа</li>
-            <li>Турку</li>
-            <li>Оулу</li>
-            <li>Ювяскюля</li>
-            <li>Лахти</li>
-            <li>Коувола</li>
-        </ul>
+        <footer>
+            <button>Privacy</button>
+            <button>Contacts</button>
+            <button>Our team</button>
+        </footer>
     </div>
-
-    <iframe scrolling="auto" src="https://ru.wikipedia.org/wiki/%D0%A5%D0%B5%D0%BB%D1%8C%D1%81%D0%B8%D0%BD%D0%BA%D0%B8"
-        width="1200px" height="500px">
-    </iframe>
 
 </body>
 

@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
+
+.container{
+    padding: 5px;
+    width: 100%;
+}
+
+header, footer {
+    height: 80px;
+    padding: 15px;
+    background-color: rgba(182, 236, 153, 0.7);
+}
+header{
+    text-align: right;
+}
+
+footer{
+    text-align: left;
+    
+}
+
+button:focus{
+    outline: none;
+}
+button:hover{
+    cursor: pointer;  
+}
+
+header button, footer button {
+    height: 50px;
+    padding: 0 15px;
+    background-color: #ffffff;
+    border-style: none;
+    border-radius: 30px/20px;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+header button + button, footer  button + button{
+    margin-left: 30px;
+}
+
+header button:hover, footer button:hover{
+    background-color: rgba(175, 148, 39, 0.5);
+}
+
+
+
+.content{
+    margin: 20px;
+    border: 10px groove rgba(175, 148, 39, 0.5);
+    padding: 25px;
+}
+
+.content button:hover {
+    background-color: burlywood;
+}
+
+.content p{
+    margin-bottom: 10px;
+    background-color: #f5f5dc;
+    padding: 5px;
+}
+
+.content button{
+    background-color: tomato;
+    border: 1px solid grey;
+    color: white;
+    padding: 5px;
+    font-weight: 600;
+}
+.subscribe-btn {
+    height: 50px;
+    width: 200px;
+}
+
+.subscribe-btn button{
+    background-color: white;
+    color: chocolate;
+    border: 4px double skyblue;
+    padding: 10px;
+    margin-left: -10px;
+    height: 100%;
+    width: 100%;
+}
+
+.subscribe-btn button:hover{
+    height: 120%;
+    width: 120%;
+   background-color: honeydew;
+}
