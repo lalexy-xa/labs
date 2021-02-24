@@ -8,12 +8,6 @@ body{
 }
 
 
-.container{
-    width: 95%;
-    border: 3px solid black;
-    padding: 50px;
-}
-
 .content{
     background: linear-gradient(to right,
     #eeeeee 25%,
@@ -25,19 +19,19 @@ body{
     #cccccc 100%);   
 }
 
-.content > div{
+.content .in-cont{
     float: left;
     width: 25%;
-    display: inline-block;
     padding: 40px 30px;
 }
 
 
-.content:after {
+
+ .content:after {
     display: block;
-    content: " ";
+    content: "";
     clear: both;
-}
+} 
 
 
 .back-bottom{
