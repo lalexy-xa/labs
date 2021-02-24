@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px;
+}
+
+
+.container{
+    width: 95%;
+    border: 3px solid black;
+    padding: 50px;
+}
+
+.content{
+    background: linear-gradient(to right,
+    #eeeeee 25%,
+    #cccccc 25%,
+    #cccccc 50%,
+    #eeeeee 50%,
+    #eeeeee 75%,
+    #cccccc 75%,
+    #cccccc 100%);   
+}
+
+.content > div{
+    float: left;
+    width: 25%;
+    display: inline-block;
+    padding: 40px 30px;
+}
+
+
+.content:after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+
+.back-bottom{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    background: url(img/12104.png) no-repeat;
+    background-size: 50px 50px;
+    background-position: left center;
+}
+
+.back-bottom:hover{
+    background-image: url(img/12104\(h\).png);
+}
