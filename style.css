@@ -5,79 +5,72 @@
 }
 
 body{
-    background-color: #cbcbcb;
-    padding-top: 10px;
-    height: 100%;
-}
-.main-container{
-    background-color: white;
-    box-shadow: 10px 10px 10px rgb(68, 67, 67);
-    height: 450px;
-    padding: 15px;
-    width: 90%;
-}
+    height: 100vh;
+    background-image: url(img/space.jpg);
+    background-size: 100% 100%;
+    cursor: url(img/curs_raw1.cur) 40 40, default;
+} 
 
-header{
-    background-color: #00ced1;
-    padding: 15px;
-    height: 80px;
-    font-family: Myriad Pro, Geneva, Tahoma, sans-serif;
-    font-size: 12pt;
-    line-height: 20px;
-    letter-spacing: 0.1ex;
-
+.sun{
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;                   
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-nav li{
-    list-style: none;
-    display: inline-block;
-    background-color: #9400d3;
-    margin-right: 20px;
+.sun:hover{
+    transition: 0.5s;
+    transform: translate(-50%, -50%) scale(1.2, 1.2); 
 }
 
-nav  a{
-    color: white;
-    text-decoration: none;
-    height: 100%;
-    padding: 15px;
-    display: inline-block;
+.orbit{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid white;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    animation: round linear 6s infinite;
+    transform: translate(-50%, -50%);
 }
 
-nav li:hover{
-    background-color: rgba(148, 0, 211, 0.637);
-    cursor: pointer;
+
+.orbit:hover{
+    animation-play-state: paused;
+}
+@keyframes round{
+    from{
+        transform: translate(-50%, -50%) rotate(0deg) ;
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
-.sidebar{
-    margin-top: 40px;
-    background-color: #ffe4c4;
+
+.mars{
+    width: 50px;
     height: 50px;
-    padding: 15px;
-    width: 440px;
-    box-sizing: content-box;
+    border-radius: 50%;
+    background-color: tomato;
+    position: absolute;
+     top: 0%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+
 }
 
-.sidebar button{
-    width: 45%;
-    margin-right: 5%;
-    height: 100%;
-    border: 1px solid #a52a2a;
-    color: white;
-    background-color: #deb887;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 12pt;
-    line-height: 20px;    
+.mars:hover{
+    transition: 0.5s;
+    transform: translate(-50%, -50%) scale(1.2, 1.2); 
 }
 
-.sidebar button:hover{
-    cursor: pointer;
-    background-color: hsla(34, 57%, 70%, 0.663);
-}
 
-.sidebar button:focus{
-    outline: none;
-}
 
-.sidebar button:first-child{
-    float: left;
-}
