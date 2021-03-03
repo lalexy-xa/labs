@@ -73,8 +73,8 @@ header{
 }
 
 .event-date, .event-price{
-   width: 200px;
-   min-width: 200px;
+   flex-basis: 200px;
+   flex-shrink: 0;
     background-color: #fffaf0;
     border: 1px solid #faebd7;
 }
@@ -92,8 +92,8 @@ header{
 }
 
 .jobs-name{
-    min-width: 200px;
-    width: 200px;
+    flex-basis: 200px;
+   flex-shrink: 0;
     background-color: #a52a2a;
     margin-right: 15px;
 }
