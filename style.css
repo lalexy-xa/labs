@@ -27,7 +27,8 @@
 
 .header__nav{
     height: 100%;
-    width: 30%;
+    width: 40%;
+    text-wrap: none;
 }
 
 .header__nav-list{
@@ -35,19 +36,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 .header__nav-item{
     display: inline-block;
     list-style-type: none;
     margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .header__nav-item a{
     display: inline-block;
     cursor: pointer;
-    padding: 10px 0;
+    padding: 10px;
 
+    border-radius: 10px;
+    background-color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
     line-height: 100%;
@@ -91,8 +96,9 @@
 }
 
 .practise-bar__canvas{
-    background-color: rgba(117, 151, 128, 0.87);
-    flex-basis: 50%;
+    flex-basis: 100%;
+    margin-top: 10px;
+    padding: 0;
  
 }
 
@@ -114,9 +120,9 @@
 }
 
 .practise-bar__canvas canvas{
-    background-color: rgba(204, 150, 204, 0.575);
+    background-color: rgba(44, 206, 111, 0.678);
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .mult-col-content{

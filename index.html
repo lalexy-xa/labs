@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>LAB-1.3.9</title>
+    <title>1.4-LAB</title>
 </head>
 
 <body>
@@ -16,8 +16,8 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="#">
-                                MainPage
+                            <a href="LAB 1-3-9/1-3-9-lab.html" target="blank">
+                               Lab-1.3.9
                             </a>
                         </li>
                         <li class="header__nav-item">
@@ -41,36 +41,48 @@
                 <div class="content__flex-wrapper">
                     <aside class="practise-bar">
                         <div class="practise-bar__video">
-                            <video controls="controls" poster="#">
-                                <source src="#" type='video/mp4'>
+                            <video controls poster="#">
+                                <source src="video/duel.mp4" type='video/mp4'>
+                                    Тег video не поддерживается вашим браузером. 
                             </video>
                         </div>
                         <div class="practise-bar__audio">
                             <audio controls="controls">
                                 <source src="http://www.sa-matra.net/sounds/starwars/ISD-Fly.wav" type="audio/wav">
                                 Тег audio не поддерживается вашим браузером.
-                                <a href="#">Скачайте музыку</a>.
                             </audio>
                         </div>
                         <div class="practise-bar__canvas">
                             <canvas id="canvas">
                                 <script>
-                                    var canvas = document.getElementById('canvas');
-                                    var ctx = canvas.getContext('2d');
-                                    ctx.lineWidth=10;
-                                    ctx.strokeStyle ="rgba(250, 128, 114, 0.664)";
-                                    ctx.strokeRect(0, 0, 300, 75);
-                                </script>
-                                <script>
                                     if (canvas.getContext) {
                                         var ctx = canvas.getContext('2d');
-
-                                        ctx.beginPath(105, 0);
-                                        ctx.moveTo(105, 50);
-                                        ctx.lineTo(200, 0);
-                                        ctx.lineTo(200, 100);
-                                        ctx.fillStyle = "rgba(250, 128, 114, 0.664)";
+                                        // Голова
+                                        ctx.beginPath();
+                                        ctx.lineWidth = 5;
+                                        ctx.fillStyle = "rgb(54, 144, 160)";
+                                        ctx.strokeStyle="rgb(148, 40, 124)";
+                                        ctx.arc(150, 75, 50, 0, 2 * Math.PI);
                                         ctx.fill();
+                                        ctx.stroke();
+                                        // Глаза
+                                        ctx.beginPath();
+                                        ctx.lineWidth = 2;
+                                        ctx.strokeStyle="black";
+                                        ctx.fillStyle = "rgb(199, 157, 18)";
+                                        ctx.moveTo(135, 60);
+                                        ctx.arc(125, 60, 10, 2 * Math.PI, 0);
+                                        ctx.moveTo(185, 60);
+                                        ctx.arc(175, 60, 10, 2 * Math.PI, 0);
+                                        ctx.fill();
+                                        ctx.stroke();
+                                        // Рот
+                                        ctx.beginPath();
+                                        ctx.strokeStyle="rgb(199, 18, 78)";
+                                        ctx.lineWidth = 5;
+                                        ctx.moveTo(130, 85);
+                                        ctx.arc(150, 85, 20, Math.PI, 0, true);
+                                        ctx.stroke();
                                     }
                                 </script>
                             </canvas>
