@@ -60,7 +60,6 @@
 }
 
 .content-wrapper{
-
     flex: 1 1;
 }
 
@@ -79,7 +78,7 @@
     padding: 10px;
 }
 
-.practise-bar__video, .practise-bar__audio, .practise-bar__canvas{
+.practise-bar__video, .practise-bar__audio{
     padding: 10px;
     
 }
@@ -96,10 +95,8 @@
 }
 
 .practise-bar__canvas{
-    flex-basis: 100%;
+    flex-basis: 50%;
     margin-top: 10px;
-    padding: 0;
- 
 }
 
 .practise-bar__audio audio{
@@ -121,8 +118,8 @@
 
 .practise-bar__canvas canvas{
     background-color: rgba(44, 206, 111, 0.678);
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 .mult-col-content{
