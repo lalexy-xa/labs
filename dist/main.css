@@ -1,0 +1,137 @@
+.rain-wrapper {
+  display: flex;
+}
+.rain-wrapper div {
+  height: 100px;
+  width: 100%;
+}
+.rain-wrapper div:nth-child(1n) {
+  background-color: red;
+}
+.rain-wrapper div:nth-child(2n) {
+  background-color: orange;
+}
+.rain-wrapper div:nth-child(3n) {
+  background-color: yellow;
+}
+.rain-wrapper div:nth-child(4n) {
+  background-color: green;
+}
+.rain-wrapper div:nth-child(5n) {
+  background-color: blue;
+}
+.rain-wrapper div:nth-child(6n) {
+  background-color: violet;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page-wrapper {
+  height: 100vh;
+  background-color: hsla(96, 11%, 37%, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+.hdr-ftr {
+  background: hsl(96, 11%, 37%);
+  padding: 15px 300px;
+  color: hsl(0, 0%, 100%);
+}
+header {
+  background: hsl(96, 11%, 37%);
+  padding: 15px 300px;
+  color: hsl(0, 0%, 100%);
+  overflow: hidden;
+}
+header .logo {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 3px hsl(0, 0%, 100%);
+  float: left;
+}
+header .logo:hover {
+  text-shadow: 0 0 6px hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+header .menu {
+  float: right;
+  margin: 0;
+}
+header .menu .label-menu {
+  text-transform: initial;
+  font-size: 20px;
+}
+header .menu .sel-menu {
+  border: 1px solid hsl(0, 0%, 100%);
+  background: hsl(96, 11%, 37%);
+  padding: 5px 30px;
+  margin-left: 15px;
+  outline: none;
+  color: hsl(0, 0%, 100%);
+}
+header .menu .sel-menu:hover {
+  cursor: pointer;
+}
+main {
+  flex: 1 0;
+}
+footer {
+  height: 80px;
+  display: flex;
+}
+footer .block {
+  height: 100%;
+  width: 10%;
+  animation: color 10s linear infinite;
+  animation-delay: calc(1s*var(--i));
+}
+@keyframes color {
+  0%,
+  1% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 10%, rgba(255, 255, 255, 0));
+  }
+  1.01%,
+  2% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 20%, rgba(255, 255, 255, 0));
+  }
+  2.01%,
+  3% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 30%, rgba(255, 255, 255, 0));
+  }
+  3.01%,
+  4% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 40%, rgba(255, 255, 255, 0));
+  }
+  4.01%,
+  5% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 50%, rgba(255, 255, 255, 0));
+  }
+  5.01%,
+  6% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 60%, rgba(255, 255, 255, 0));
+  }
+  6.01%,
+  7% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 70%, rgba(255, 255, 255, 0));
+  }
+  7.01%,
+  8% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 80%, rgba(255, 255, 255, 0));
+  }
+  8.01%,
+  9% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 90%, rgba(255, 255, 255, 0));
+  }
+  9.01%,
+  10% {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15)) 100%, rgba(255, 255, 255, 0));
+  }
+  10.01%,
+  100% {
+    background: radial-gradient(hsla(96, 11%, 37%, 0.05), hsl(96, 11%, 37%));
+  }
+}

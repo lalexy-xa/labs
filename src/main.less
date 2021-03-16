@@ -1,0 +1,138 @@
+@padd: 15px 300px;
+@back-col: hsl(96, 11%, 37%);
+@back-col-gr: fade(@back-col, 5%);
+@color: lighten(@back-col, 80%);
+@trans-color: rgba(255, 255, 255, 0);
+@grad: rgb(calc(var(--i) * 20), calc(var(--i) * 30), calc(var(--i) * 15));
+@rainbow: red, orange, yellow, green, blue,violet;
+@i: 1, 2, 3, 4, 5, 6;
+
+
+
+.rain-wrapper{
+    display: flex;
+    div{
+        height: 100px;
+        width: 100%;
+        each( @i,
+            {
+                &:nth-child(@{value}n)
+                    {
+                        background-color: extract(@rainbow, @value);
+                    }
+            }
+        )
+    }
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    height: 100vh;
+    background-color: @back-col-gr;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+.hdr-ftr{
+    background: @back-col;
+    padding: @padd;
+    color: @color;
+}
+header{
+    .hdr-ftr();
+    overflow: hidden;
+      .logo{
+        text-transform: uppercase;
+        font-size: 28px;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-shadow: 0 0 3px @color;
+        float: left;
+        &:hover{
+          text-shadow: 0 0 6px @color;
+          cursor: pointer;
+        }
+      }
+      .menu{
+        float: right;
+        margin: 0;
+        .label-menu{
+        text-transform: initial;
+          font-size: 20px;
+        }
+        .sel-menu{
+          border: 1px solid @color;
+          background: @back-col;
+          padding: 5px 30px;
+          margin-left: 15px;
+          outline: none;
+          color: @color;
+          &:hover{
+              cursor: pointer;
+          }
+        }
+      }    
+}
+
+main{
+    flex: 1 0;
+}
+
+footer{
+    height: 80px;
+    display: flex;
+    .block{
+        height:  100%;
+        width: 10%;
+        animation: color 10s linear infinite;
+        animation-delay: calc(1s*var(--i));
+    }
+    @keyframes color {
+        0%, 1%{
+            background: 
+                        linear-gradient(to right, @trans-color, @grad 10%,@trans-color);
+        }
+        1.01%, 2%{
+            background:  
+                        linear-gradient(to right,@trans-color, @grad 20%, @trans-color);
+        }
+        2.01%, 3%{
+            background:  
+                        linear-gradient(to right,@trans-color,  @grad 30%, @trans-color);
+        }
+        3.01%, 4%{
+            background:  linear-gradient(to right,@trans-color, @grad 40%, @trans-color);
+        }
+        4.01%, 5%{
+            background:  linear-gradient(to right, @trans-color, @grad 50%, @trans-color);
+        }
+        5.01%, 6%{
+            background:  linear-gradient(to right, @trans-color, @grad 60%, @trans-color);
+        }
+        6.01%, 7%{
+            background: linear-gradient(to right, @trans-color, @grad 70%, @trans-color);
+        }
+        7.01%, 8%{
+            background: linear-gradient(to right, @trans-color, @grad 80%, @trans-color);
+        }
+        8.01%, 9%{
+            background: linear-gradient(to right,@trans-color, @grad 90%, @trans-color);
+        }
+        9.01%, 10%{
+            background:  linear-gradient(to right, @trans-color, @grad 100%, @trans-color);
+        }
+        10.01%, 100%{
+            background:  radial-gradient(@back-col-gr, @back-col);
+        }
+    }
+}
+

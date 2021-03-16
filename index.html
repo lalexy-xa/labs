@@ -5,156 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>1.4-LAB</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <title>1.5-LAB</title>
 </head>
 
 <body>
-    <div class="main-wrapper">
-        <header class="header">
-            <div class="container">
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a href="LAB 1-3-9/1-3-9-lab.html" target="blank">
-                               Lab-1.3.9
-                            </a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#">
-                                Articles
-                            </a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#">
-                                Pictures
-                            </a>
-                        </li>
-                    </ul>
+    <div class="page-wrapper">
 
-                </nav>
+        <header class="container">
+            <div class="logo">logo</div>
+            <div class="menu">
+                <label for="sel-menu" class="label-menu">
+                    Меню:
+                </label>
+                <select id="sel-menu" class="sel-menu">
+                    <option class="d">
+                        золото
+                    </option>
+                    <option>
+                        серебро
+                    </option>
+                    <option>
+                        бронза
+                    </option>
+                </select>
             </div>
-
         </header>
-        <div class="content-wrapper">
-            <div class="container">
-                <div class="content__flex-wrapper">
-                    <aside class="practise-bar">
-                        <div class="practise-bar__video">
-                            <video controls poster="#">
-                                <source src="video/duel.mp4" type='video/mp4'>
-                                    Тег video не поддерживается вашим браузером. 
-                            </video>
-                        </div>
-                        <div class="practise-bar__audio">
-                            <audio controls="controls">
-                                <source src="http://www.sa-matra.net/sounds/starwars/ISD-Fly.wav" type="audio/wav">
-                                Тег audio не поддерживается вашим браузером.
-                            </audio>
-                        </div>
-                        <div class="practise-bar__canvas">
-                            <canvas id="canvas">
-                                <script>
-                                    if (canvas.getContext) {
-                                        var ctx = canvas.getContext('2d');
-                                        // Голова
-                                        ctx.beginPath();
-                                        ctx.lineWidth = 5;
-                                        ctx.fillStyle = "rgb(54, 144, 160)";
-                                        ctx.strokeStyle="rgb(148, 40, 124)";
-                                        ctx.arc(150, 75, 50, 0, 2 * Math.PI);
-                                        ctx.fill();
-                                        ctx.stroke();
-                                        // Глаза
-                                        ctx.beginPath();
-                                        ctx.lineWidth = 2;
-                                        ctx.strokeStyle="black";
-                                        ctx.fillStyle = "rgb(199, 157, 18)";
-                                        ctx.arc(125, 60, 10, 2 * Math.PI, 0);
-                                        ctx.moveTo(185, 60);
-                                        ctx.arc(175, 60, 10, 2 * Math.PI, 0);
-                                        ctx.fill();
-                                        ctx.stroke();
-                                        // Рот
-                                        ctx.beginPath();
-                                        ctx.strokeStyle="rgb(199, 18, 78)";
-                                        ctx.lineWidth = 5;
-                                        ctx.arc(150, 85, 20, Math.PI, 0, true);
-                                        ctx.stroke();
-                                    }
-                                </script>
-                            </canvas>
-
-                        </div>
-
-                    </aside>
-                    <section class="mult-col-content">
-                        <article class="article">
-                            <h2 class="article__title">
-                                Lorem
-                            </h2>
-                            <div class="article__text">
-                                <p>
-                                    Статья́ — это жанр жур&shy;на&shy;лис&shy;ти&shy;ки, в ко&shy;то&shy;ром ав&shy;тор
-                                    ста&shy;вит за&shy;да&shy;чу про&shy;ана&shy;ли&shy;зи&shy;ро&shy;вать
-                                    об&shy;щест&shy;вен&shy;ные си&shy;ту&shy;а&shy;ции, про&shy;цес&shy;сы,
-                                    яв&shy;ле&shy;ния, преж&shy;де все&shy;го с точ&shy;ки зре&shy;ния
-                                    за&shy;ко&shy;но&shy;мер&shy;нос&shy;тей,
-                                    ле&shy;жа&shy;щих в их ос&shy;но&shy;ве.
-                                </p>
-                                <p>
-                                    Статья́ — это жанр жур&shy;на&shy;лис&shy;ти&shy;ки, в ко&shy;то&shy;ром ав&shy;тор
-                                    ста&shy;вит за&shy;да&shy;чу про&shy;ана&shy;ли&shy;зи&shy;ро&shy;вать
-                                    об&shy;щест&shy;вен&shy;ные си&shy;ту&shy;а&shy;ции, про&shy;цес&shy;сы,
-                                    яв&shy;ле&shy;ния, преж&shy;де все&shy;го с точ&shy;ки зре&shy;ния
-                                    за&shy;ко&shy;но&shy;мер&shy;нос&shy;тей,
-                                    ле&shy;жа&shy;щих в их ос&shy;но&shy;ве.
-                                </p>
-                                <p class="dialogue">
-                                    Та&shy;ко&shy;му жан&shy;ру как статья при&shy;су&shy;ща ши&shy;ри&shy;на
-                                    прак&shy;ти&shy;чес&shy;ких обоб&shy;ще&shy;ний, глу&shy;бо&shy;кий ана&shy;лиз
-                                    фак&shy;тов и
-                                    яв&shy;ле&shy;ний, чет&shy;кая со&shy;ци&shy;аль&shy;ная
-                                    на&shy;прав&shy;лен&shy;ность[ис&shy;точ&shy;ник не ука&shy;зан 4165 дней]. В статье
-                                    ав&shy;тор
-                                    рас&shy;смат&shy;ри&shy;ва&shy;ет от&shy;дель&shy;ные си&shy;ту&shy;а&shy;ции как
-                                    часть бо&shy;лее ши&shy;ро&shy;ко&shy;го яв&shy;ле&shy;ния. Ав&shy;тор
-                                    ар&shy;гу&shy;мен&shy;ти&shy;ро&shy;ван&shy;но пи&shy;шет о сво&shy;ей точ&shy;ке
-                                    зре&shy;ния.
-                                </p>
-                                <p>
-                                    В статье вы&shy;ра&shy;жа&shy;ет&shy;ся раз&shy;вер&shy;ну&shy;тая
-                                    об&shy;сто&shy;я&shy;тель&shy;ная ар&shy;гу&shy;мен&shy;ти&shy;ро&shy;ван&shy;ная
-                                    кон&shy;цеп&shy;ция ав&shy;то&shy;ра или
-                                    ре&shy;дак&shy;ции по по&shy;во&shy;ду ак&shy;ту&shy;аль&shy;ной
-                                    со&shy;циол&shy;вать суть во&shy;про&shy;са).
-                                </p>
-                            </div>
-
-
-                        </article>
-
-                    </section>
-                </div>
+        <main>
+            <div class="rain-wrapper">
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div></div>
             </div>
-        </div>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__content">
-                    <div class="footer__copysvg">
-                        <svg width="48" height="48">
-                            <circle cx="24" cy="24" r="20" stroke="rgb(31, 30, 22)" stroke-width="4"
-                                fill="rgba(231, 225, 169, 0.774)" />
-                            <path d="M32 17 C9 7 9 43 32 33" fill="rgba(231, 225, 169, 0.774)" stroke="rgb(31, 30, 22)"
-                                stroke-width="4" />
-                        </svg>
 
-                    </div>
-                </div>
-            </div>
+        </main>
+
+
+
+        <footer class="hdr-ftr">
+            <div class="block" style="--i:1;"> </div>
+            <div class="block" style="--i:2;"> </div>
+            <div class="block" style="--i:3;"> </div>
+            <div class="block" style="--i:4;"> </div>
+            <div class="block" style="--i:5;"> </div>
+            <div class="block" style="--i:6;"> </div>
+            <div class="block" style="--i:7;"> </div>
+            <div class="block" style="--i:8;"> </div>
+            <div class="block" style="--i:9;"> </div>
+            <div class="block" style="--i:10;"> </div>
         </footer>
 
     </div>
+
 </body>
 
 </html>
