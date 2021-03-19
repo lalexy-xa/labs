@@ -28,7 +28,7 @@
 .header__nav{
     height: 100%;
     width: 40%;
-    text-wrap: none;
+    /* text-wrap: none; */
 }
 
 .header__nav-list{
