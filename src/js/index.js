@@ -34,10 +34,10 @@ let currentVisitorName;
 
 // alert( `hello ${name}` ); // ?
 
-let name2 = "Ilya";
+name = "Ilya";
 
 alert( `hello ${1}` ); // hello 1
 
-alert( `hello ${"name2"}` ); // hello name2
+alert( `hello ${"name"}` ); // hello name2
 
-alert( `hello ${name2}` ); // hello Ilya
+alert( `hello ${name}` ); // hello Ilya
