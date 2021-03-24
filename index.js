@@ -2,8 +2,9 @@
 
 // Создайте страницу, которая спрашивает имя у пользователя и выводит его.
 
-let userName = prompt("Your name?");
+let userName = prompt("Your name?", 6);
 alert(userName);
+console.log(typeof prompt("Your name?", 7));
 
 
 // Ниже приведён код, который запрашивает у пользователя два числа и показывает их сумму.
@@ -21,3 +22,4 @@ let a = +prompt("Первое число?", 1);
 let b = +prompt("Второе число?", 2);
 
 alert(a + b);
+
