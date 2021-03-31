@@ -14,7 +14,8 @@ let login = prompt("Your login?", "");
 
 if (!login) {
 	alert("Отменено");
-} else {
+}
+else {
 	if (login.toLowerCase() === "админ") {
 		let password = prompt("Your password?", "");
 		if (password === "Я главный") {
@@ -26,7 +27,8 @@ if (!login) {
 				alert("Неверный пароль");
 			}
 		}
-	} else {
+	}
+	else {
 		alert("Я вас не знаю");
 	}
 }
