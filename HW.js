@@ -71,14 +71,15 @@ let ladder = {
 	step: 0,
 	up() {
 		this.step++;
-		return this;
+		return this; //изменение
 	},
 	down() {
 		this.step--;
-		return this;
+		return this;//изменение
 	},
 	showStep: function () { // показывает текущую ступеньку
 		alert(this.step);
+		return this;//изменение
 	}
 };
 ladder.up().up().down().showStep(); // 1
