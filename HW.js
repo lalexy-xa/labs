@@ -1,35 +1,3 @@
-// Создайте пустой объект user.
-// Добавьте свойство name со значением John.
-// Добавьте свойство surname со значением Smith.
-// Измените значение свойства name на Pete.
-// Удалите свойство name из объекта.
-
-let user = {};
-user.name = "John";
-user.surname = "Smith";
-user.name = "Pete";
-delete user.name;
-
-// Задачи по FOR IN:
-
-// Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
-// Должно работать так:
-// let schedule = {};
-// alert( isEmpty(schedule) ); // true
-// schedule["8:30"] = "get up";
-// alert( isEmpty(schedule) ); // false
-
-function isEmpty(obj) {
-	for (let key in obj) {
-		return false;
-	}
-	return true;
-}
-
-let schedule = {};
-alert(isEmpty(schedule)); // true
-schedule["8:30"] = "get up";
-alert(isEmpty(schedule)); // false
 
 // У нас есть объект, в котором хранятся зарплаты нашей команды:
 // let salaries = {
@@ -37,7 +5,8 @@ alert(isEmpty(schedule)); // false
 //   Ann: 160,
 //   Pete: 130
 // }
-// Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+// Напишите код для суммирования всех зарплат и сохраните результат в переменной sum.
+//Должно получиться 390.
 // Если объект salaries пуст, то результат должен быть 0.
 
 let salaries = {
@@ -70,3 +39,47 @@ let menu = {
 
 multiplyNumeric(menu);
 console.log(menu);
+
+// Создайте объект calculator (калькулятор) с тремя методами:
+
+// read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
+// sum() (суммировать) возвращает сумму сохранённых значений.
+// mul() (умножить) перемножает сохранённые значения и возвращает результат.
+
+let calculator = {
+	read() {
+		this.num1 = +prompt("Enter number 1", "");
+		this.num2 = +prompt("Enter number 2", "");
+	},
+	sum() {
+		return this.num1 + this.num2;
+	},
+	mul() {
+		return this.num1 * this.num2;
+	},
+};
+
+calculator.read();
+console.log(calculator.sum());
+console.log(calculator.mul());
+
+// Это ladder(лестница) – объект, который позволяет подниматься вверх и спускаться:
+// Измените код методов up, down и showStep таким образом, чтобы их вызов можно было сделать по цепочке,
+// например так: ladder.up().up().down().showStep();
+
+let ladder = {
+	step: 0,
+	up() {
+		this.step++;
+		return this;
+	},
+	down() {
+		this.step--;
+		return this;
+	},
+	showStep: function () { // показывает текущую ступеньку
+		alert(this.step);
+	}
+};
+ladder.up().up().down().showStep(); // 1
+ladder.up().up().up().up().down().showStep();
