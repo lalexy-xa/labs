@@ -42,7 +42,7 @@ function getMaxSubSum(arr) {
 			maxSum = subSumm;
 		}
 	}
-	
+}
 
 console.log(getMaxSubSum([-1, 2, 3, -9]));
 console.log(getMaxSubSum([2, -1, 2, 3, -9]));
