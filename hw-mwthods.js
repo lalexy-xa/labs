@@ -167,13 +167,26 @@ function shuffle(arr) {
 	}
 	return arr;
 }
-let arrShuf = [1, 2, 3];
-console.log(shuffle(arrShuf));
-console.log(shuffle(arrShuf));
-console.log(shuffle(arrShuf));
-console.log(shuffle(arrShuf));
-console.log(shuffle(arrShuf));
-console.log(shuffle(arrShuf));
+
+let count = {
+	'123': 0,
+	'132': 0,
+	'213': 0,
+	'231': 0,
+	'321': 0,
+	'312': 0
+};
+
+for (let i = 0; i < 100000; i++) {
+	let array = [1, 2, 3];
+	shuffle(array);
+	count[array.join('')]++;
+}
+
+// показать количество всех возможных вариантов
+for (let key in count) {
+	console.log(`${key}: ${count[key]}`);
+}
 
 // Напишите функцию getAverageAge(users),
 // которая принимает массив объектов со свойством age и возвращает средний возраст.
