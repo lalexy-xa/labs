@@ -17,9 +17,9 @@ function formatDate(date) {
 		case interval < 1000 * 60 * 60:
 			return (`${interval / 1000 / 60} мин. назад`);
 		default:
-			return (("0" + date.getDate() % 100).slice(-2)
+			return (("0" + date.getDate()).slice(-2)
 				+ "." + ("0" + (date.getMonth() + 1)).slice(-2)
-				+ "." + ("0" + date.getFullYear() % 1000).slice(-2)
+				+ "." + date.getFullYear().toString().slice(-2) // даты меньше 
 				+ " " + ("0" + date.getHours()).slice(-2)
 				+ ":" + ("0" + date.getMinutes()).slice(-2));
 	}
