@@ -9,12 +9,83 @@
     <title>JS</title>
 </head>
 
-<body>
 
-    <div class="block">
-        <div class="block__item"></div>
-        <!--  -->
-    </div>
+<body>
+    <ul class="tree" id="tree">
+        <li>
+            <h6>Животные</h6>
+            <ul>
+                <li>
+                    <h6>Млекопитающие</h6>
+                    <ul>
+                        <li><span>Коровы</span></li>
+                        <li><span>Ослы</span></li>
+                        <li><span>Собаки</span></li>
+                        <li><span>Тигры</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Другие</h6>
+                    <ul>
+                        <li><span>Змеи</span></li>
+                        <li><span>Птицы</span></li>
+                        <li><span>Ящерицы</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h6>Рыбы</h6>
+            <ul>
+                <li>
+                    <h6>Аквариумные</h6>
+                    <ul>
+                        <li><span>Гуппи</span></li>
+                        <li><span>Скалярии</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Морские</h6>
+                    <ul>
+                        <li><span>Морская форель</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <table id="grid">
+        <thead>
+            <tr>
+                <th data-type="number">Возраст</th>
+                <th data-type="string">Имя</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5</td>
+                <td>Вася</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Петя</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Женя</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Маша</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Илья</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button data-tooltip="эта подсказка длиннее, чем элемент">Короткая кнопка</button>
+    <button data-tooltip="HTML<br>подсказка">Ещё кнопка</button>
     <script src="index.js"></script>
 </body>
 
