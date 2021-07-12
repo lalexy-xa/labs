@@ -1,5 +1,5 @@
 import { itemsNumStatus, clearCompl, getItems } from "./storage.js";
-import { menuStatus } from "./constant.js";
+import { menuStatus, STORAGE } from "./constant.js";
 import { ul } from "./list.js";
 import { putStatOnBut } from "./helpFunc.js"
 
@@ -21,7 +21,7 @@ all.addEventListener("click", () => {
 	for (let i of liList) {
 		i.hidden = false;
 	}
-	localStorage.setItem("pressedItem", "all");
+	localStorage.setItem(STORAGE.PRESSED, "all");
 	putStatOnBut("all");
 });
 
@@ -35,7 +35,7 @@ active.addEventListener("click", () => {
 		let item = getItems()[i];
 		item.active ? liList[i].hidden = false : liList[i].hidden = true;
 	}
-	localStorage.setItem("pressedItem", "active");
+	localStorage.setItem(STORAGE.PRESSED, "active");
 	putStatOnBut("active");
 });
 
@@ -48,7 +48,7 @@ done.addEventListener("click", () => {
 		let item = getItems()[i];
 		!item.active ? liList[i].hidden = false : liList[i].hidden = true;
 	}
-	localStorage.setItem("pressedItem", "done");
+	localStorage.setItem(STORAGE.PRESSED, "done");
 	putStatOnBut("done");
 });
 

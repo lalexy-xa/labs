@@ -8,4 +8,8 @@ export const menuStatus = {
 	all: 0,
 }
 
+export const STORAGE = {
+	LIST: "list",
+	PRESSED: "pressedButton"
+}
 

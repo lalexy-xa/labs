@@ -1,4 +1,4 @@
-import { addTask, makeId, checkAll } from "./storage.js";
+import { addTask, makeId, checkAll, getItems } from "./storage.js";
 import { makeLiItem, reloadLi } from "./list.js";
 import { changeNumItemsAcive } from "./menu.js";
 
@@ -26,7 +26,7 @@ form.addEventListener("submit", (event) => {
 		return;
 	}
 	addTask({ //добавляет новый элемент в хранилище
-		id: makeId(Math.random()),
+		id: makeId(getItems().length),
 		active: true,
 		value: inpt.value
 	});

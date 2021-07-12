@@ -1,6 +1,7 @@
 import { getItems, deleteItem, Change } from "./storage.js";
 import { changeNumItemsAcive } from "./menu.js";
 import { putStatOnBut } from "./helpFunc.js"
+import { STORAGE } from "./constant.js";
 
 const ul = document.createElement("ul");
 
@@ -53,7 +54,7 @@ export const makeLiItem = () => {
 	let check = li.querySelector("input[type='checkbox']");
 	check.id = li.dataset.id;
 	li.querySelector("label").setAttribute("for", check.id);
-
+	localStorage.getItem(STORAGE.PRESSED) === "done" ? li.hidden = true : li.hidden = false;
 	ul.append(li);
 	return ul;
 }
@@ -72,11 +73,11 @@ export const reloadLi = () => {
 		check.id = li.dataset.id;//связываю label с чекбоксом
 		li.querySelector("label").setAttribute("for", check.id);
 
-		if (localStorage.getItem("pressedItem") === "active") {
+		if (localStorage.getItem(STORAGE.PRESSED) === "active") {
 			!element.active ? li.hidden = true : li.hidden = false;
 			putStatOnBut("active");
 		} else {
-			if (localStorage.getItem("pressedItem") === "done") {
+			if (localStorage.getItem(STORAGE.PRESSED) === "done") {
 				element.active ? li.hidden = true : li.hidden = false;
 				putStatOnBut("done");
 			}
@@ -86,7 +87,7 @@ export const reloadLi = () => {
 		}
 		ul.append(li);
 	});
-	changeNumItemsAcive();//так как функция используется в кнопках, кот меняют кол-во акт эл (clear, ведылить все)
+	changeNumItemsAcive();//так как функция используется в кнопках, кот меняют кол-во акт эл (check, ведылить все)
 }
 
 ul.classList.add("todo__list");
