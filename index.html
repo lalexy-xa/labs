@@ -5,16 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
     <title>JS</title>
 </head>
 
 <body>
+    <header class="header">
 
-    <div class="block">
-        <div class="block__item"></div>
-        <!--  -->
-    </div>
+        <div class="menu-wrapper">
+            <div class="container">
+                <nav class="menu">
+                    <ul>
+                        <li class="menu__item">
+                            <a href="#">Sign in</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#">My account</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#">Order status</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#">Help</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="search-card-wrapper">
+            <div class="container">
+                <div class="search-card">
+                    <div class="search-card__logo">
+                        <img src="./src/img/svg/logo.svg" alt="">
+                    </div>
+                    <div class="search-card__search">
+                        <form action="">
+                            <input type="text" placeholder="Search">
+                            <button type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                    <div class="search-card__card">
+
+                    </div>
+                    <div class="search-card__wish-list">
+
+                    </div>
+                    <div class="cart-wrapper card">
+                        <div class="cart_card-top">
+                            <div class="cart-img">
+                                <img src="./src/img/svg/card.svg" alt="">
+                            </div>
+                            <div class="cart__name">
+                                Your cart
+                            </div>
+                            <div class="cart__num-items">
+                                (<span>0</span> items)
+                            </div>
+                        </div>
+                        <div class="cart_sum-but">
+                            <div class="cart__sum">
+                                $<span>059.0</span>
+                            </div>
+                            <button class="cart_btn">
+                                checkout
+                            </button>
+                        </div>
+                    </div>
+                    <div class="wish-list__wrapper">
+                        <div class="wish-list__logo">
+                            <img src="/src/img/svg/wishList.svg" alt="wish-list">
+                        </div>
+                        <div class="wish-list__text">
+                            Wish list
+                            <span class="wish-list__number">
+                                20
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
     <script src="index.js"></script>
 </body>
 
